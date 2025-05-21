@@ -68,7 +68,7 @@ void readAccelerometer() {
 void sendSMS() {
   sim900.println("AT+CMGF=1"); // Text mode
   delay(1000);
-  sim900.println("AT+CMGS=\"+91XXXXXXXXXX\""); // Replace with actual number
+  sim900.println("AT+CMGS=\"+916385749401\""); 
   delay(1000);
   sim900.print("ALERT: Calving may have started. Please check your cow immediately.");
   delay(500);
@@ -77,7 +77,7 @@ void sendSMS() {
 }
 
 void makeCall() {
-  sim900.println("ATD+91XXXXXXXXXX;"); // Replace with actual number
+  sim900.println("ATD+916385749401;"); 
   delay(20000); // Let it ring for 20 seconds
   sim900.println("ATH"); // Hang up
 }
